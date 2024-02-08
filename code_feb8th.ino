@@ -1,4 +1,5 @@
-# 19067
+//shared with Mr Hansen successfully :)
+// 19067
 //setting up pins
 const byte LEDPIN = 13 const byte PAWPIN1 = 1;
 const byte PAWPIN2 = 2;
