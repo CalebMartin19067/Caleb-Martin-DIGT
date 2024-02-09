@@ -16,6 +16,7 @@ Servo rightEar;
 
 //setting pins as inputs and outputs
 void setup() {
+  Serial.begin(9600);
   pinMode(13, OUTPUT);
   pinMode(PAWPIN1, INPUT);
   pinMode(PAWPIN2, INPUT);
@@ -41,13 +42,24 @@ void loop() {
     digitalWrite(LEDPIN, HIGH);
   }
   if (digitalRead(PAWPIN4) == HIGH) {
-    int score = playGame();
   }
 }
 
-void playMusic() {
+void wagEars() {
+
+  leftEar.write(0);
+  rightEar.write(0);
+  leftEar.write(90);
+  rightEar.write(90);
+  leftEar.write(0);
+  rightEar.write(0);
 }
-int playGame() {
-  byte score = 99;
-  return score;
+void blinkingLed() {
+  byte randNumber = random(1, 3);
+  for (int i = 0; i < randNumber; i++) {
+    digitalWrite(LEDPIN, HIGH);
+    delay(500);
+    digitalWrite(LEDPIN, LOW);
+    delay(500);
+  }
 }
