@@ -20,8 +20,6 @@ void setup() {
   }
 }
 
-
-
 void loop() {
   if (digitalRead(BTNPIN) == HIGH) {
     Serial.println("Rolling dice");
@@ -60,4 +58,6 @@ void rollDice(byte numSides) {
     diceRoll = random (1, 20);
     break;
   }
+  //HAN COMMENT you were missing the code I added below
+  screen.print(diceRoll);
 }
