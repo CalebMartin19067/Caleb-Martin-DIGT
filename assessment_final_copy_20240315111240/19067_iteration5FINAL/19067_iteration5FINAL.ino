@@ -14,7 +14,7 @@ LPS25HB pressureSensor;  // Start instance of LPS25HB module
 OpenLog sdCard;          // Create instance of OpenLog class to data log
 
 // Functions
-void logData();                 // Function for logging data
+//TEACHER COMMENT you shouldn't need this logData method here when you have it on line 42// void logData();                 // Function for logging data
 void setup() {                  //setup
   Wire.begin();                 // Start I2C communication
   Serial.begin(9600);           // Begin serial monitor
@@ -27,8 +27,7 @@ void setup() {                  //setup
 
   if (!pressureSensor.begin()) {  // Checking if the pressure sensor has successfully initialized
     Serial.println("LPS25HB not detected. Please check wiring.");
-    while (1)
-      ;  // Stop here if the sensor is not detected
+    while (1);  // Stop here if the sensor is not detected
   }
 
   Serial.println("Initialization complete.");  //Print if successful
@@ -39,6 +38,8 @@ void loop() {
   delay(UPDATE_INTERVAL);  // Wait for the specified interval at setup
 }
 
+//TEACHER COMMENT you want this method to take a parameter or return a value
+//I would suggest a parameter to let you toggle the serial monitor statements on or off in this method
 void logData() {
   // Read pressure and temperature data
   float pressure = pressureSensor.getPressure_hPa();         // Grab pressure reading in hPa
