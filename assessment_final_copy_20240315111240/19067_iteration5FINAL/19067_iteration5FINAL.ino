@@ -1,7 +1,7 @@
 //19067
 //FINAL ITERATION 5
 #include <Wire.h>
-#include "SparkFun_Qwiic_OpenLog_Arduino_Library.h"
+#include "SparkFun_Qwiic_OpenLog_Arduino_Library.h" //TEACHER COMMENT not consistent with the other two libraries " vs <
 #include <SparkFun_LPS25HB_Arduino_Library.h>
 
 // Constants
@@ -10,7 +10,7 @@ const int UPDATE_INTERVAL = 40;             // Interval between data logging as 
 const int BUZZER_PIN = 8;                   // set buzzer pin as 8
 
 // Objects
-LPS25HB pressureSensor;  // Start instance of LPS25HB module
+LPS25HB pressureSensor;  // Start instance of LPS25HB module //TEACHER COMMENT pressureSensor was the name in the example code
 OpenLog sdCard;          // Create instance of OpenLog class to data log
 
 // Functions
