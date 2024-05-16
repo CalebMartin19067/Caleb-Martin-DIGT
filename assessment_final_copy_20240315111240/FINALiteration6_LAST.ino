@@ -26,7 +26,7 @@ void setup() {                  //setup
   sdCard.syncFile();        // Sync the file with the OpenLog board
 
   if (!pressureSensor.begin()) {  // Checking if the pressure sensor has successfully initialized
-    Serial.println("LPS25HB module not detected. Please check wiring.");
+    Serial.println("LPS25HB module is not detected. Check the wiring.");
     while (1);  // Stop here if the sensor is not detected
   }
 
@@ -49,9 +49,9 @@ void logData(bool testing) {
   unsigned long currentTime = millis();  // Get the current time in millis
   if(testing){
   // Print pressure and temperature readings to serial monitor
-  Serial.print("Pressure (hPa): ");
+  Serial.print("Pressure:");
   Serial.print(pressure);
-  Serial.print(", Temperature (°C): ");
+  Serial.print(", Temperature:");
   Serial.println(temperature);
   }
   // Write data to the data file on the OpenLog board, done in .CSV format as per the ","
