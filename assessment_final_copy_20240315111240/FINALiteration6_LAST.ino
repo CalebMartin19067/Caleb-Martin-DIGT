@@ -1,3 +1,4 @@
+//For the ethical implication, this C++ Program was largely compiled/based on 3 sketches; Sparkfun_LBS25HB example library, Openlog example library, and Ardunino Millis example
 //19067 Caleb Martin
 // FINAL ITERATION 6
 #include <Wire.h>
